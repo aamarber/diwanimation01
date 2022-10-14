@@ -1,5 +1,5 @@
 *{
-    --loading-animation-duration: 1s;
+    --loading-animation-duration: 5s;
 }
 
 .loading-bar-container{
@@ -16,4 +16,20 @@
     width: 0%;
     padding-top: 1em;
     height: 4em;
+
+    background-color: red;
+    transition: width var(--loading-animation-duration);
+}
+
+.loading-bar-container:hover .loaded-state{
+    width: 100%;
+}
+
+.loading-text{
+    margin-left: 2em;
+    transition: margin-left var(--loading-animation-duration);
+}
+
+.loading-bar-container:hover .loading-text{
+    margin-left: 25%;
 }
